@@ -8,7 +8,7 @@
 
 import pandas as pd
 
-path_in = "./datasets/berlin-center_trips.tntp"
+path_in = "./inputs/berlin-center_trips.tntp"
 
 
 def read_tntp_file(path_in: str) -> pd.DataFrame:
@@ -42,7 +42,7 @@ def read_tntp_file(path_in: str) -> pd.DataFrame:
     # convert to dataframe
     df_tntp = pd.DataFrame(final_list, columns=col_name)
 
-    df_tntp.to_csv("demand.csv", index=False)
+    df_tntp.to_csv("./outputs/demand.csv", index=False)
 
     return df_tntp
 
